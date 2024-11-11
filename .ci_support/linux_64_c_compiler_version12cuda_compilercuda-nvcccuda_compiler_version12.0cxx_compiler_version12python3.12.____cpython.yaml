@@ -30,6 +30,8 @@ giflib:
 - '5.2'
 github_actions_labels:
 - cirun-openstack-cpu-xlarge
+grpc_cpp:
+- '1.52'
 icu:
 - '75'
 libabseil:
@@ -37,17 +39,15 @@ libabseil:
 libcurl:
 - '8'
 libgrpc:
-- '1.67'
+- '1.65'
 libjpeg_turbo:
 - '3'
 libpng:
 - '1.6'
 libprotobuf:
-- 5.28.2
+- 5.27.5
 nccl:
 - '2'
-numpy:
-- '1.26'
 openssl:
 - '3'
 perl:
@@ -76,7 +76,6 @@ zip_keys:
   - cuda_compiler_version
   - docker_image
 - - python
-  - numpy
   - python_impl
 zlib:
 - '1'

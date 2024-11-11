@@ -161,13 +161,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libtensorflow-green.svg)](https://anaconda.org/conda-forge/libtensorflow) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libtensorflow.svg)](https://anaconda.org/conda-forge/libtensorflow) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libtensorflow.svg)](https://anaconda.org/conda-forge/libtensorflow) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libtensorflow.svg)](https://anaconda.org/conda-forge/libtensorflow) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libtensorflow_cc-green.svg)](https://anaconda.org/conda-forge/libtensorflow_cc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libtensorflow_cc.svg)](https://anaconda.org/conda-forge/libtensorflow_cc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libtensorflow_cc.svg)](https://anaconda.org/conda-forge/libtensorflow_cc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libtensorflow_cc.svg)](https://anaconda.org/conda-forge/libtensorflow_cc) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tensorflow-green.svg)](https://anaconda.org/conda-forge/tensorflow) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tensorflow.svg)](https://anaconda.org/conda-forge/tensorflow) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tensorflow.svg)](https://anaconda.org/conda-forge/tensorflow) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tensorflow.svg)](https://anaconda.org/conda-forge/tensorflow) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tensorflow--base-green.svg)](https://anaconda.org/conda-forge/tensorflow-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tensorflow-base.svg)](https://anaconda.org/conda-forge/tensorflow-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tensorflow-base.svg)](https://anaconda.org/conda-forge/tensorflow-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tensorflow-base.svg)](https://anaconda.org/conda-forge/tensorflow-base) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tensorflow--cpu-green.svg)](https://anaconda.org/conda-forge/tensorflow-cpu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tensorflow-cpu.svg)](https://anaconda.org/conda-forge/tensorflow-cpu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tensorflow-cpu.svg)](https://anaconda.org/conda-forge/tensorflow-cpu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tensorflow-cpu.svg)](https://anaconda.org/conda-forge/tensorflow-cpu) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tensorflow--estimator-green.svg)](https://anaconda.org/conda-forge/tensorflow-estimator) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tensorflow-estimator.svg)](https://anaconda.org/conda-forge/tensorflow-estimator) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tensorflow-estimator.svg)](https://anaconda.org/conda-forge/tensorflow-estimator) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tensorflow-estimator.svg)](https://anaconda.org/conda-forge/tensorflow-estimator) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tensorflow--gpu-green.svg)](https://anaconda.org/conda-forge/tensorflow-gpu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tensorflow-gpu.svg)](https://anaconda.org/conda-forge/tensorflow-gpu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tensorflow-gpu.svg)](https://anaconda.org/conda-forge/tensorflow-gpu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tensorflow-gpu.svg)](https://anaconda.org/conda-forge/tensorflow-gpu) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tensorflow--split-green.svg)](https://anaconda.org/conda-forge/tensorflow-split) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tensorflow-split.svg)](https://anaconda.org/conda-forge/tensorflow-split) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tensorflow-split.svg)](https://anaconda.org/conda-forge/tensorflow-split) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tensorflow-split.svg)](https://anaconda.org/conda-forge/tensorflow-split) |
 
 Installing tensorflow
 =====================
@@ -179,41 +173,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libtensorflow, libtensorflow_cc, tensorflow, tensorflow-base, tensorflow-cpu, tensorflow-estimator, tensorflow-gpu` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `tensorflow-split` can be installed with `conda`:
 
 ```
-conda install libtensorflow libtensorflow_cc tensorflow tensorflow-base tensorflow-cpu tensorflow-estimator tensorflow-gpu
-```
-
-or with `mamba`:
-
-```
-mamba install libtensorflow libtensorflow_cc tensorflow tensorflow-base tensorflow-cpu tensorflow-estimator tensorflow-gpu
-```
-
-It is possible to list all of the versions of `libtensorflow` available on your platform with `conda`:
-
-```
-conda search libtensorflow --channel conda-forge
+conda install tensorflow-split
 ```
 
 or with `mamba`:
 
 ```
-mamba search libtensorflow --channel conda-forge
+mamba install tensorflow-split
+```
+
+It is possible to list all of the versions of `tensorflow-split` available on your platform with `conda`:
+
+```
+conda search tensorflow-split --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search tensorflow-split --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search libtensorflow --channel conda-forge
+mamba repoquery search tensorflow-split --channel conda-forge
 
-# List packages depending on `libtensorflow`:
-mamba repoquery whoneeds libtensorflow --channel conda-forge
+# List packages depending on `tensorflow-split`:
+mamba repoquery whoneeds tensorflow-split --channel conda-forge
 
-# List dependencies of `libtensorflow`:
-mamba repoquery depends libtensorflow --channel conda-forge
+# List dependencies of `tensorflow-split`:
+mamba repoquery depends tensorflow-split --channel conda-forge
 ```
 
 
