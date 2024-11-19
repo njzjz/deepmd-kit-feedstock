@@ -1,4 +1,4 @@
-From e06239813185b1575a21c7d8ce8b14bd720ae1c6 Mon Sep 17 00:00:00 2001
+From f7c3d89c2339cdf2517621e42666553d5ffd36da Mon Sep 17 00:00:00 2001
 From: "Uwe L. Korn" <uwe.korn@quantco.com>
 Date: Fri, 27 Oct 2023 11:21:11 +0200
 Subject: [PATCH 09/27] Different file ending for flatbuffers LICENSE
@@ -8,7 +8,7 @@ Subject: [PATCH 09/27] Different file ending for flatbuffers LICENSE
  1 file changed, 5 insertions(+)
 
 diff --git a/third_party/flatbuffers/BUILD.system b/third_party/flatbuffers/BUILD.system
-index 8fe4d7a5907..297f8baf0c0 100644
+index 8fe4d7a5..297f8baf 100644
 --- a/third_party/flatbuffers/BUILD.system
 +++ b/third_party/flatbuffers/BUILD.system
 @@ -5,6 +5,11 @@ filegroup(
@@ -23,6 +23,3 @@ index 8fe4d7a5907..297f8baf0c0 100644
  # Public flatc library to compile flatbuffer files at runtime.
  cc_library(
      name = "flatbuffers",
--- 
-2.47.0
-

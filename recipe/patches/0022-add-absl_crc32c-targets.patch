@@ -1,4 +1,4 @@
-From 031dcf3b8f7dbc3e74926a4e9039b395baccf733 Mon Sep 17 00:00:00 2001
+From 4d7b4e4c13759923bbf033c4b7c5e71fa33e22dd Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Mon, 13 May 2024 09:41:09 +1100
 Subject: [PATCH 22/27] add absl_crc32c targets
@@ -11,7 +11,7 @@ Subject: [PATCH 22/27] add absl_crc32c targets
 
 diff --git a/third_party/absl/system.absl.crc.BUILD b/third_party/absl/system.absl.crc.BUILD
 new file mode 100644
-index 00000000000..487c36ff45b
+index 00000000..487c36ff
 --- /dev/null
 +++ b/third_party/absl/system.absl.crc.BUILD
 @@ -0,0 +1,70 @@
@@ -86,7 +86,7 @@ index 00000000000..487c36ff45b
 +    ],
 +)
 diff --git a/third_party/absl/workspace.bzl b/third_party/absl/workspace.bzl
-index addb2410abd..e71aa167260 100644
+index addb2410..e71aa167 100644
 --- a/third_party/absl/workspace.bzl
 +++ b/third_party/absl/workspace.bzl
 @@ -14,6 +14,7 @@ def repo():
@@ -97,6 +97,3 @@ index addb2410abd..e71aa167260 100644
          "cleanup",
          "container",
          "debugging",
--- 
-2.47.0
-
