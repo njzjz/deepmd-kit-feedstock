@@ -1,4 +1,4 @@
-From 3d79a13204bb6fa626dc1cb82e03506280a53590 Mon Sep 17 00:00:00 2001
+From 134f011001350c88b2cda80242ce81a8276d1098 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Sun, 12 May 2024 18:45:03 +1100
 Subject: [PATCH 18/27] add absl_string_view target
@@ -8,7 +8,7 @@ Subject: [PATCH 18/27] add absl_string_view target
  1 file changed, 13 insertions(+), 1 deletion(-)
 
 diff --git a/third_party/absl/system.absl.strings.BUILD b/third_party/absl/system.absl.strings.BUILD
-index d04776c9..9f537def 100644
+index d04776c98bf..9f537def3d7 100644
 --- a/third_party/absl/system.absl.strings.BUILD
 +++ b/third_party/absl/system.absl.strings.BUILD
 @@ -2,6 +2,18 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
@@ -39,3 +39,6 @@ index d04776c9..9f537def 100644
      deps = [
          ":str_format",
          "//absl/container:compressed_tuple",
+-- 
+2.47.0
+

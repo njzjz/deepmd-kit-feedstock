@@ -1,4 +1,4 @@
-From a878cc2a275f4887f0309ace423a049a30b1a39e Mon Sep 17 00:00:00 2001
+From 57f1c15968f28b4f0eaeaf731a50045693b984da Mon Sep 17 00:00:00 2001
 From: "Uwe L. Korn" <uwe.korn@quantco.com>
 Date: Wed, 15 Nov 2023 09:18:28 +0100
 Subject: [PATCH 11/27] Add well_known_types_py_pb2 to protobuf systemlib
@@ -8,7 +8,7 @@ Subject: [PATCH 11/27] Add well_known_types_py_pb2 to protobuf systemlib
  1 file changed, 7 insertions(+)
 
 diff --git a/third_party/systemlibs/protobuf.BUILD b/third_party/systemlibs/protobuf.BUILD
-index c7d94060..504bc81a 100644
+index c7d940605f9..504bc81af0d 100644
 --- a/third_party/systemlibs/protobuf.BUILD
 +++ b/third_party/systemlibs/protobuf.BUILD
 @@ -111,3 +111,10 @@ py_library(
@@ -22,3 +22,6 @@ index c7d94060..504bc81a 100644
 +    srcs = [proto[1][0] for proto in WELL_KNOWN_PROTO_MAP.items()],
 +    visibility = ["//visibility:public"],
 +)
+-- 
+2.47.0
+

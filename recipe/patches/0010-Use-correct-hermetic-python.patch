@@ -1,4 +1,4 @@
-From 95485b5d00566df1982a410672821a951697d05f Mon Sep 17 00:00:00 2001
+From cf6cfb2ccb6f6449e88e84a4fa2d757b13f3ce86 Mon Sep 17 00:00:00 2001
 From: "Uwe L. Korn" <uwe.korn@quantco.com>
 Date: Fri, 27 Oct 2023 11:21:38 +0200
 Subject: [PATCH 10/27] Use correct, hermetic python
@@ -9,7 +9,7 @@ Subject: [PATCH 10/27] Use correct, hermetic python
  2 files changed, 7 insertions(+)
 
 diff --git a/tensorflow/compiler/mlir/quantization/tensorflow/gen_quantized_function_library.py b/tensorflow/compiler/mlir/quantization/tensorflow/gen_quantized_function_library.py
-index 8352b974..7eed8b4e 100644
+index 8352b974996..7eed8b4e373 100644
 --- a/tensorflow/compiler/mlir/quantization/tensorflow/gen_quantized_function_library.py
 +++ b/tensorflow/compiler/mlir/quantization/tensorflow/gen_quantized_function_library.py
 @@ -14,6 +14,11 @@
@@ -25,7 +25,7 @@ index 8352b974..7eed8b4e 100644
  import re
  import string
 diff --git a/tensorflow/python/tools/api/generator/create_python_api.py b/tensorflow/python/tools/api/generator/create_python_api.py
-index cd76ae73..c12533c9 100644
+index cd76ae73f77..c12533c9b57 100644
 --- a/tensorflow/python/tools/api/generator/create_python_api.py
 +++ b/tensorflow/python/tools/api/generator/create_python_api.py
 @@ -18,6 +18,8 @@ import collections
@@ -37,3 +37,6 @@ index cd76ae73..c12533c9 100644
  
  from tensorflow.python.tools.api.generator import doc_srcs
  from tensorflow.python.util import tf_decorator
+-- 
+2.47.0
+
