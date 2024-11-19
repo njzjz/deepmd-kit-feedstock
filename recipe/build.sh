@@ -191,7 +191,6 @@ build --logging=6
 build --verbose_failures
 build --define=PREFIX=${PREFIX}
 build --define=PROTOBUF_INCLUDE_PATH=${PREFIX}/include
-build --config=noaws
 build --cpu=${TARGET_CPU}
 build --local_cpu_resources=${CPU_COUNT}
 EOF
