@@ -8,8 +8,10 @@
 {% set build = build + 200 %}
 {% endif %}
 
+# Quite often libml_dtypes-headers and ml_dtypes diverge.
 # https://github.com/tensorflow/tensorflow/blob/v2.18.0/third_party/py/ml_dtypes/workspace.bzl
-{% set ml_dtypes_version = "0.5.0" %}
+{% set libml_dtypes_version = "0.5.0" %}
+{% set ml_dtypes_version = "0.4.0" %}
 
 package:
   name: tensorflow-split
@@ -142,7 +144,7 @@ requirements:
     - sqlite
     - snappy
     - zlib
-    - ml_dtypes >={{ ml_dtypes_version }},<0.6
+    - ml_dtypes >={{ ml_dtypes_version }},<0.5
 
 outputs:
   # 2021/12/29: hmaarrfk
@@ -223,7 +225,7 @@ outputs:
         - gast >=0.2.1,!=0.5.0,!=0.5.1,!=0.5.2
         - google-pasta >=0.1.1
         - h5py >=3.11
-        - ml_dtypes >={{ ml_dtypes_version }},<0.6
+        - ml_dtypes >={{ ml_dtypes_version }},<0.5
         - numpy
         - opt_einsum >=2.3.2
         # simplified compared to upstream due to constraints arising through libprotobuf
@@ -246,7 +248,7 @@ outputs:
         - google-pasta >=0.1.1
         - grpcio {{ libgrpc }}.*
         - h5py >=3.11
-        - ml_dtypes >={{ ml_dtypes_version }},<0.6
+        - ml_dtypes >={{ ml_dtypes_version }},<0.5
         - opt_einsum >=2.3.2
         - protobuf >=5.26,<6
         - python-flatbuffers >=24.3.25
@@ -441,7 +443,7 @@ outputs:
         - sqlite
         - zlib
       run:
-        - libml_dtypes-headers >={{ ml_dtypes_version }},<0.6
+        - libml_dtypes-headers >={{ libml_dtypes_version }},<0.6
         # avoid that people without GPUs needlessly download ~200-300MB
         - __cuda  # [cuda_compiler_version != "None"]
     test:
