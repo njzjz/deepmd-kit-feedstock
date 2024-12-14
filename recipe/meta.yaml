@@ -106,6 +106,7 @@ requirements:
     - libcurand-dev     # [(cuda_compiler_version or "").startswith("12")]
     - libcufft-dev      # [(cuda_compiler_version or "").startswith("12")]
     - libcusparse-dev   # [(cuda_compiler_version or "").startswith("12")]
+    - cuda-compat       # [(cuda_compiler_version or "").startswith("12")]
     # conda build requirements
     - python
     - pip

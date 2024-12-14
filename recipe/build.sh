@@ -140,6 +140,9 @@ if [[ ${cuda_compiler_version} != "None" ]]; then
 	
 	# Needs GCC 13+
 	echo "build --define=xnn_enable_avxvnniint8=false" >> .bazelrc
+
+        # cuda-compat is used for providing libcuda.so.1 temporarily
+        cp $PREFIX/cuda-compat/libcuda.so.1 $PREFIX/lib/libcuda.so.1
     else
         echo "unsupported cuda version."
         exit 1
@@ -263,3 +266,4 @@ bazel clean
 
 # This was only needed for protobuf_python
 rm -rf $PREFIX/include/python
+rm -f $PREFIX/lib/libcuda.so.1
