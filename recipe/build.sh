@@ -128,8 +128,8 @@ if [[ ${cuda_compiler_version} != "None" ]]; then
 	cp ${PREFIX}/include/nccl.h ${BUILD_PREFIX}/targets/x86_64-linux/include/third_party/nccl/
 
 	export LOCAL_CUDA_PATH="${BUILD_PREFIX}/targets/x86_64-linux"
-        export LOCAL_CUDNN_PATH="${PREFIX}/targets/x86_64-linux"
-        export LOCAL_NCCL_PATH="${PREFIX}/targets/x86_64-linux"
+        export LOCAL_CUDNN_PATH="${PREFIX}"
+        export LOCAL_NCCL_PATH="${PREFIX}"
 
 	# hmaarrfk -- 2023/12/30
         # This logic should be safe to keep in even when the underlying issue is resolved
