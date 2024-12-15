@@ -126,6 +126,10 @@ if [[ ${cuda_compiler_version} != "None" ]]; then
 	cp ${PREFIX}/include/cudnn*.h ${BUILD_PREFIX}/targets/x86_64-linux/include/third_party/gpus/cudnn/
 	mkdir -p ${BUILD_PREFIX}/targets/x86_64-linux/include/third_party/nccl
 	cp ${PREFIX}/include/nccl.h ${BUILD_PREFIX}/targets/x86_64-linux/include/third_party/nccl/
+	rsync -a ${PREFIX}/targets/x86_64-linux/lib/ ${BUILD_PREFIX}/targets/x86_64-linux/lib/
+	ln -s ${BUILD_PREFIX}/bin/fatbinary ${BUILD_PREFIX}/targets/x86_64-linux/bin/fatbinary
+	ln -s ${BUILD_PREFIX}/bin/nvlink ${BUILD_PREFIX}/targets/x86_64-linux/bin/nvlink
+	ln -s ${BUILD_PREFIX}/bin/ptxas ${BUILD_PREFIX}/targets/x86_64-linux/bin/ptxas
 
 	export LOCAL_CUDA_PATH="${BUILD_PREFIX}/targets/x86_64-linux"
         export LOCAL_CUDNN_PATH="${PREFIX}"
