@@ -344,6 +344,7 @@ outputs:
         - icu                                      # [build_platform != target_platform]
         - {{ pin_subpackage('tensorflow-base') }}  # [build_platform != target_platform]
       host:
+        - cuda-compat       # [(cuda_compiler_version or "").startswith("12")]
         - python
         - pip
         - packaging
