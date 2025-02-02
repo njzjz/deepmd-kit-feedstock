@@ -146,7 +146,8 @@ if [[ ${cuda_compiler_version} != "None" ]]; then
         echo "build --define=xnn_enable_avxvnniint8=false" >> .bazelrc
 
         # cuda-compat is used for providing libcuda.so.1 temporarily
-        cp $PREFIX/cuda-compat/libcuda.so.1 $PREFIX/lib/libcuda.so.1
+        # https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/tf_sig_build_dockerfiles/setup.cuda.sh#L28
+        ln -s ${BUILD_PREFIX}/targets/x86_64-linux/lib/stubs/libcuda.so ${PREFIX}/lib/libcuda.so.1
     else
         echo "unsupported cuda version."
         exit 1
