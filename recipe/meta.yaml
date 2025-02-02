@@ -62,6 +62,10 @@ build:
   skip: true  # [cuda_compiler_version == "None" and github_actions_labels == "cirun-openstack-gpu-2xlarge"]
   skip: true  # [cuda_compiler_version != "None" and github_actions_labels == "cirun-openstack-cpu-2xlarge"]
 
+  # SKip a few things for speed
+  skip: true  # [py != 312]
+  skip: true  # [cuda_compiler_version == "None"]
+
 requirements:
   build:
     - perl                                   # [linux]
