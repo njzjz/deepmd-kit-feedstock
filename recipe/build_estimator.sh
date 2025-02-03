@@ -4,7 +4,7 @@ set -exuo pipefail
 
 if [[ "${cuda_compiler_version}" == 12* ]]; then
     # cuda-compat is used for providing libcuda.so.1 temporarily
-    cp $PREFIX/cuda-compat/libcuda.so.1 $PREFIX/lib/libcuda.so.1
+    ln -s ${BUILD_PREFIX}/targets/x86_64-linux/lib/stubs/libcuda.so ${PREFIX}/lib/libcuda.so.1
 fi
 
 pushd tensorflow-estimator
