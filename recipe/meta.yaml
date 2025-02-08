@@ -49,6 +49,7 @@ source:
       - patches/0028-Fix-ResolvePadding-to-be-consistent-in-the-size-of-t.patch
       # https://github.com/tensorflow/tensorflow/pull/86413
       - patches/0029-Avoid-linking-with-internal-nvrtc.patch
+      - patches/0030-remove-dependencies-to-libcuda.patch
   - url: https://github.com/tensorflow/estimator/archive/refs/tags/v{{ estimator_version.replace(".rc", "-rc") }}.tar.gz
     sha256: 2d7e100b1878084da34b5e23b49a0cbb5ee8a7add74b7dd189a82ada1cf85530
     folder: tensorflow-estimator
@@ -112,7 +113,6 @@ requirements:
     - libcurand-dev     # [(cuda_compiler_version or "").startswith("12")]
     - libcufft-dev      # [(cuda_compiler_version or "").startswith("12")]
     - libcusparse-dev   # [(cuda_compiler_version or "").startswith("12")]
-    - cuda-compat       # [(cuda_compiler_version or "").startswith("12")]
     - libnvjitlink-dev  # [(cuda_compiler_version or "").startswith("12")]
     # conda build requirements
     - python
@@ -202,7 +202,6 @@ outputs:
         - libcurand-dev     # [(cuda_compiler_version or "").startswith("12")]
         - libcufft-dev      # [(cuda_compiler_version or "").startswith("12")]
         - libcusparse-dev   # [(cuda_compiler_version or "").startswith("12")]
-        - cuda-compat       # [(cuda_compiler_version or "").startswith("12")]
         - libnvjitlink-dev  # [(cuda_compiler_version or "").startswith("12")]
         # conda build requirements
         - python
@@ -350,7 +349,6 @@ outputs:
         - icu                                      # [build_platform != target_platform]
         - {{ pin_subpackage('tensorflow-base') }}  # [build_platform != target_platform]
       host:
-        - cuda-compat       # [(cuda_compiler_version or "").startswith("12")]
         - python
         - pip
         - packaging
