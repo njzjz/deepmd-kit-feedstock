@@ -12,8 +12,6 @@ package:
 source:
   - url: https://github.com/deepmodeling/{{ name }}/archive/v{{ version }}.tar.gz
     sha256: 8042a4939c5c0eba4f1c8adc530a83343630c42f9e268dff372c03ae0ec3f1f2
-    patches:
-      - 0001-fix-cmake-improve-CUDA-C-standard-setting-for-compat.patch
   - url: https://github.com/lammps/lammps/archive/{{ lammps_version }}.tar.gz
     sha256: 6112e0cc352c3140a4874c7f74db3c0c8e30134024164509ecf3772b305fde2e
     folder: lammps
